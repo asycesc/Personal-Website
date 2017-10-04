@@ -4,6 +4,7 @@
 
 <% @portfolios.each do |eachPortfolio| %>
 	<p><%= link_to eachPortfolio.title, portfolio_show_path(eachPortfolio.id) %></p>
+	<p><%= eachPortfolio.subtitle %></p>
 	<p><%= eachPortfolio.body %></p>
 	<%= image_tag eachPortfolio.thumb_image if !eachPortfolio.thumb_image.nil?%>
 	<%= link_to "Edit Portfolio", edit_portfolio_path(eachPortfolio.id)%>

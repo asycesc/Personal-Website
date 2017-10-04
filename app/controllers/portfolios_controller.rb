@@ -8,7 +8,7 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolios = Portfolio.new(params.require(:portfolio).permit(:title, :body))
+    @portfolios = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
     respond_to do |format|
       if @portfolios.save
@@ -28,7 +28,7 @@ class PortfoliosController < ApplicationController
   def update
   	@portfolio = Portfolio.find(params[:id])
     respond_to do |format|
-      if @portfolio.update(params.require(:portfolio).permit(:title, :body))
+      if @portfolio.update(params.require(:portfolio).permit(:title, :subtitle, :body))
         format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }
         format.json { render :show, status: :created, location: @portfolios }
       else
