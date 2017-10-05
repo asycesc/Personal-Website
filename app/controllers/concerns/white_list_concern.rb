@@ -1,4 +1,4 @@
-module WhiteList
+module WhiteListConcern
   extend ActiveSupport::Concern 
 
   included do
