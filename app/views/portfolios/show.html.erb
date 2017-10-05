@@ -5,3 +5,9 @@
 <h1><%= @portfolio.title %> </h1>
 <h2><%= @portfolio.subtitle %> </h2>
 <em><%= @portfolio.body %> </em>
+
+<h2>Technology Stack</h2>
+
+<% @portfolio.technologies.each do |tech| %>
+<p><%= tech.name %></p>      
+<% end %>
