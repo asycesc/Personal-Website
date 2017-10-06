@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
   include SetSourceConcern
   
   include CurrentUserConcern
+  
+  include PageContentConcern
 
 end
