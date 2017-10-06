@@ -22,7 +22,7 @@
     <% end %>
     <%= yield %>
 
-    <%= render "partial/navigate" %>
+    <%= render "partial/navigate" , location: 'bottom' %>
     <% if session[:source] %>
       Thanks for visiting my website from my <%= session[:source] %>
     <% end %>
