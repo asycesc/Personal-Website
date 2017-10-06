@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  include WhiteListConcern
+	protect_from_forgery with: :exception
+	include WhiteListConcern
 
-  include SetSourceConcern
-  
-  include CurrentUserConcern
-  
-  include PageContentConcern
+	include SetSourceConcern
+	
+	include CurrentUserConcern
+	
+	include PageContentConcern
 
 end
