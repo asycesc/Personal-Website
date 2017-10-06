@@ -11,7 +11,11 @@ module ApplicationHelper
 
 	def session_source_helper
 		if session[:source]
-			content_tag(:p, "Thanks for visiting my website from my #{session[:source]}")
+			content_tag(:p, "Thanks for visiting from my #{session[:source]}")
 		end
+	end
+	
+	def set_copyright_helper
+		SiyView::Renderer.copyright "Siyu An", "All rights reserved"
 	end
 end

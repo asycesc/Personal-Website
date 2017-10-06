@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/asycesc/siy_view
+  revision: c4a7871757ed606b61f0976f8f59b7c61cc800d0
+  specs:
+    siy_view (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,6 +202,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
+  siy_view!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -204,4 +211,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.3
