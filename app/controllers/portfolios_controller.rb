@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+	access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, website_admin: :all
+
 	before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
 	layout "portfolio"
