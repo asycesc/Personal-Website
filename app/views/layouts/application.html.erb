@@ -16,12 +16,11 @@
 		<div class="site-wrapper">
 			<div class="site-wrapper-inner">
 				<div class="cover-container">
-					<%= render "partials/navigate" %>
-					<%= login_condition_helper %>
+					<%= render "partials/application_navigator" %>
 					<%= session_source_helper %>
 					<%= yield %>
 					<hr>
-					<%= set_copyright_helper %>
+					<%= render "partials/application_footer" %>
 				</div>
 			</div>
 		</div>
