@@ -13,21 +13,17 @@
 	</head>
 
 	<body>
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-
-		<%= render "partial/navigate", location: 'top' %>
-		
-		<%= login_condition_helper %>
-
-		<%= session_source_helper %>
-
-		<%= yield %>
-
-		<hr>
-
-		<%= set_copyright_helper %>
-
-
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+					<%= render "partials/navigate" %>
+					<%= login_condition_helper %>
+					<%= session_source_helper %>
+					<%= yield %>
+					<hr>
+					<%= set_copyright_helper %>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
