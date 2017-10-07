@@ -1,5 +1,5 @@
 module ApplicationHelper
-	def login_condition_helper(style)
+	def login_condition_helper(style = "")
 		if current_user.is_a?(GuestUser)
 			(link_to "Signup", new_user_registration_path, method: :get, class: style) +
 			" ".html_safe +

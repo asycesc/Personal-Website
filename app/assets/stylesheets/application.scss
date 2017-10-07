@@ -162,7 +162,7 @@ body {
 }
 
 /*
- * User Edit-Page Style
+ * Custom Style
  */
 
  .card-body {
@@ -170,5 +170,17 @@ body {
 	text-align: left;
  }
  .auth_link a {
- 	color: black;
+	color: black;
  }
+ .signup-text {
+	text-align:right;
+ }
+ .login > .card {
+ 	width: 350px;
+ 	margin: 0 auto;
+ }
+  .password_new > .card {
+ 	width: 400px;
+ 	margin: 0 auto;
+ }
+
