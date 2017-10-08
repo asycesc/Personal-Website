@@ -1,0 +1,31 @@
+<div class="collapse bg-dark" id="navbarHeader">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 py-4">
+				<h4 class="text-white">About</h4>
+				<p class="text-muted">Displayed here are the introduction of some of my projects. Please feel free to browse and check the source code.</p>
+			</div>
+			<div class="col-sm-4 py-4">
+				<h4 class="text-white">Contact</h4>
+				<ul class="list-unstyled">
+					<li><%= link_to 'Home', root_path, class:'nav-link active', class:'text-white' %></li>
+					<li><%= link_to 'About', about_path, class:'nav-link', class:'text-white' %></li>
+					<li><%= link_to 'Contact', contact_path, class:'nav-link', class:'text-white' %></li>
+					<li><%= link_to 'Blog', blogs_path, class:'nav-link', class:'text-white' %></li>
+					<li><%= link_to 'Portfolio', portfolios_path, class:'nav-link', class:'text-white' %></li>
+					<li><%= login_condition_helper 'text-white' %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="navbar navbar-dark bg-dark">
+	<div class="container d-flex justify-content-between">
+		<span class="navbar-brand">Siyu An</span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</div>
+</div>
+
