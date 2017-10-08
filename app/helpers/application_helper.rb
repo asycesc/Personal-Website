@@ -18,4 +18,42 @@ module ApplicationHelper
 	def set_copyright_helper
 		SiyView::Renderer.copyright "Siyu An", "All rights reserved"
 	end
+
+	def navigator_items 
+		[
+			{
+				url: root_path,
+				title: 'Home'
+			}, 
+			{
+				url: about_path,
+				title: 'About'
+			}, 
+			{
+				url: contact_path,
+				title: 'Contact'
+			}, 
+			{
+				url: blogs_path,
+				title: 'Blogs'
+			}, 
+			{
+				url: portfolios_path,
+				title: 'Portfolios'
+			}
+		]
+	end
+
+
+	def navigator_helper style, tag
+		navigator = ''
+		navigator_items.each do |item|
+			navigator << "<#{tag}> <a href='#{item[:url]}' class='#{style} #{active_helper? item[:url]}'>#{item[:title]}</a></#{tag}>"
+		end
+		navigator.html_safe	
+	end
+
+	def active_helper? path
+		"active" if current_page? path
+	end
 end
