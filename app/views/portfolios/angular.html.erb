@@ -3,7 +3,7 @@
 <%= link_to "Create New Item", new_portfolio_path if logged_in?(:website_admin) %>
 
 <% @portfolio.each do |eachPortfolio| %>
-	<p><%= link_to eachPortfolio.title, portfolio_show_path(eachPortfolio.id) %></p>
+	<p><%= link_to eachPortfolio.title, portfolio_path(eachPortfolio.id) %></p>
 	<p><%= eachPortfolio.subtitle %></p>
 	<p><%= eachPortfolio.body %></p>
 	<%= image_tag eachPortfolio.thumb_image if !eachPortfolio.thumb_image.nil?%>

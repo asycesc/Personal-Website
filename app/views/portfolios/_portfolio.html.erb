@@ -1,7 +1,7 @@
 <div class="card">
 	<%= image_tag portfolio.thumb_image if !portfolio.thumb_image.nil?%>
 	<p class="card-text">
-		<span><%= link_to portfolio.title, portfolio_show_path(portfolio.id) %></span>
+		<span><%= link_to portfolio.title, portfolio_path(portfolio.id) %></span>
 		<span><%= portfolio.subtitle %></span>
 	</p>
 </div>
