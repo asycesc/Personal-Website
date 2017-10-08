@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome";
+
 /*
  * Globals
  */
@@ -165,3 +167,11 @@ h6, .h6 {
 .blog-footer p:last-child {
 	margin-bottom: 0;
 }
+
+ /*
+ * blog sidebar
+ */
+ .list-unstyled  li a {
+ 	font-size: 30px;
+ }
+
