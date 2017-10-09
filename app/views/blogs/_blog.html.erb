@@ -3,8 +3,8 @@
 	<p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now)  %> ago</p>
 	<% if logged_in?(:website_admin) %>
 		<p class="blog-post-meta"><%= link_to blog.status, status_control_blog_path(blog)%> /
-		<%= link_to 'Edit', edit_blog_path(blog) %>  /
-		<%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+		<%= link_to 'edit', edit_blog_path(blog) %>  /
+		<%= link_to 'delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 	<% end %>
 	<p><%= blog.body %></p>
 </div>

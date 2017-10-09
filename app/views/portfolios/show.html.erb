@@ -14,6 +14,12 @@
 				<p><%= tech.name %></p>      
 			<% end %>
 
+			<% if logged_in?(:website_admin) %>
+				<div>
+					<%= link_to 'edit', edit_portfolio_path(@portfolio) %> /
+					<%= link_to 'delete', portfolio_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>
