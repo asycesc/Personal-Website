@@ -6,7 +6,7 @@ class PortfoliosController < ApplicationController
 	layout "portfolio"
 
 	def index
-		@portfolios = Portfolio.all
+		@portfolios = Portfolio.by_index
 		@page_title = "My Projects"
 	end
 

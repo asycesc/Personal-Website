@@ -20,4 +20,8 @@ class Portfolio < ApplicationRecord
 	has_many :technologies
 
 	accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank?}
+
+	def self.by_index
+		order("index ASC")
+	end
 end
