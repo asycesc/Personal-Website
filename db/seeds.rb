@@ -35,7 +35,7 @@ end
 
 1.times do |portfolio|
 	Portfolio.create!(
-		title: "#{portfolio} title",
+		title: "#{portfolio} portfolio",
 			subtitle: "Angular",
 		body: "asddasdasdas",
 		main_image: "http://via.placeholder.com/600x400",

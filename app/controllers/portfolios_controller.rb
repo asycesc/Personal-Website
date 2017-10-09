@@ -7,6 +7,7 @@ class PortfoliosController < ApplicationController
 
 	def index
 		@portfolios = Portfolio.all
+		@page_title = "My Projects"
 	end
 
 	def angular
@@ -22,7 +23,7 @@ class PortfoliosController < ApplicationController
 		@portfolio = Portfolio.new(portfolio_params)
 		respond_to do |format|
 			if @portfolio.save
-				format.html { redirect_to portfolio_show_path(@portfolio.id), notice: 'Portfolio was successfully created.' }
+				format.html { redirect_to portfolio_path(@portfolio.id), notice: 'Portfolio was successfully created.' }
 				format.json { render :show, status: :created, location: @portfolio }
 			else
 				format.html { render :new }
@@ -37,7 +38,7 @@ class PortfoliosController < ApplicationController
 	def update
 		respond_to do |format|
 			if @portfolio.update(portfolio_params)
-				format.html { redirect_to portfolio_show_path(@portfolio.id), notice: 'Portfolio was successfully updated.' }
+				format.html { redirect_to portfolio_path(@portfolio.id), notice: 'Portfolio was successfully updated.' }
 				format.json { render :show, status: :created, location: @portfolios }
 			else
 				format.html { render :new }
@@ -60,7 +61,8 @@ class PortfoliosController < ApplicationController
 	private
 		# Use callbacks to share common setup or constraints between actions.
 		def set_portfolio
-			@portfolio = Portfolio.find(params[:id])
+			@portfolio = Portfolio.friendly.find(params[:id])
+			@page_title = @portfolio.title
 		end
 
 		# Never trust parameters from the scary internet, only allow the white list through.

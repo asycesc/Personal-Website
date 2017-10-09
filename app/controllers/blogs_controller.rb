@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-	access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, website_admin: :all
+	access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :status_control]}, website_admin: :all
 
 	before_action :set_blog, only: [:show, :edit, :update, :destroy, :status_control]
 	
@@ -8,14 +8,13 @@ class BlogsController < ApplicationController
 	# GET /blogs
 	# GET /blogs.json
 	def index
-		@blogs = Blog.all
+		@blogs = Blog.page(params[:page]).per(5)
 		@page_title = "My Blogs"
 	end
 
 	# GET /blogs/1
 	# GET /blogs/1.json
 	def show
-		@page_title = @blog.title
 		@seo_keywords = @blog.body
 	end
 
@@ -81,6 +80,7 @@ class BlogsController < ApplicationController
 		# Use callbacks to share common setup or constraints between actions.
 		def set_blog
 			@blog = Blog.friendly.find(params[:id])
+			@page_title = @blog.title
 		end
 
 		# Never trust parameters from the scary internet, only allow the white list through.
