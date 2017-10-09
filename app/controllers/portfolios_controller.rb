@@ -7,6 +7,7 @@ class PortfoliosController < ApplicationController
 
 	def index
 		@portfolios = Portfolio.all
+		@page_title = "My Projects"
 	end
 
 	def angular
@@ -61,6 +62,7 @@ class PortfoliosController < ApplicationController
 		# Use callbacks to share common setup or constraints between actions.
 		def set_portfolio
 			@portfolio = Portfolio.friendly.find(params[:id])
+			@page_title = @portfolio.title
 		end
 
 		# Never trust parameters from the scary internet, only allow the white list through.

@@ -44,7 +44,6 @@ module ApplicationHelper
 		]
 	end
 
-
 	def navigator_helper style, tag
 		navigator = ''
 		navigator_items.each do |item|

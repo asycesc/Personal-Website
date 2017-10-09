@@ -15,7 +15,6 @@ class BlogsController < ApplicationController
 	# GET /blogs/1
 	# GET /blogs/1.json
 	def show
-		@page_title = @blog.title
 		@seo_keywords = @blog.body
 	end
 
@@ -81,6 +80,7 @@ class BlogsController < ApplicationController
 		# Use callbacks to share common setup or constraints between actions.
 		def set_blog
 			@blog = Blog.friendly.find(params[:id])
+			@page_title = @blog.title
 		end
 
 		# Never trust parameters from the scary internet, only allow the white list through.
