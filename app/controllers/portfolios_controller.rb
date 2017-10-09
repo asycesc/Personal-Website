@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-	access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, website_admin: :all
+	access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, website_admin: :all
 
 	before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
@@ -58,10 +58,17 @@ class PortfoliosController < ApplicationController
 		end
 	end
 
+	def sort
+		params[:order].each do |key, value|
+			Portfolio.find(value[:id]).update(position: value[:position])
+		end
+		render body: nil
+	end
+
 	private
 		# Use callbacks to share common setup or constraints between actions.
 		def set_portfolio
-			@portfolio = Portfolio.friendly.find(params[:id])
+			@portfolio = Portfolio.find(params[:id])
 			@page_title = @portfolio.title
 		end
 
