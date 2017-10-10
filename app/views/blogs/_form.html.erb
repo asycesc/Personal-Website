@@ -15,6 +15,13 @@
 						) 
 		%>
 	</div>
+	<div class="form-group">
+		<%= form.radio_button :status, 'draft' %>
+		<%= form.label :status, 'draft' %>
+
+		<%= form.radio_button :status, 'published' %>
+		<%= form.label :status, 'published' %>
+	</div>
 
 	<div class="form-group">
 		<%= form.label :title %>
