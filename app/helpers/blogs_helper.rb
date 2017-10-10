@@ -5,13 +5,13 @@ module BlogsHelper
 
 	def markdown text
 		coderayified = CodeRayify.new(filter_html: true, hard_warp: true)
-		option = {
+		extensions = {
 			fenced_code_blocks: true,
 			no_intra_emphasis: true,
 			auto_links: true,
 			lax_html_blocks: true
 		}
-		markdown_html = Redcarpet::Markdown.new(coderayified, option)
+		markdown_html = Redcarpet::Markdown.new(coderayified, extensions)
 		markdown_html.render(text).html_safe
 	end
 
