@@ -34,6 +34,10 @@ module ApplicationHelper
 				title: 'Contact'
 			}, 
 			{
+				url: news_path,
+				title: 'News'
+			},
+			{
 				url: blogs_path,
 				title: 'Blogs'
 			}, 
@@ -41,6 +45,7 @@ module ApplicationHelper
 				url: portfolios_path,
 				title: 'Portfolios'
 			}
+
 		]
 	end
 
