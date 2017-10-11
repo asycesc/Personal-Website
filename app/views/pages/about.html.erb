@@ -1,12 +1,100 @@
-<h1>About me</h1>
-<hr>
+<div class="about-card">
+	<div class="card">
+		<h3>About me</h3>
+		<hr>
+		<div class="row">
+			<div class='col-md-4'>
+				<%= image_tag "profile.jpg", width: 150, height: 150, alt: "profile", class:'about-picture' %>
+				<div class="skill-set">
+					<% @skills.each do |skill| %>
+						<div class="skill">
+							<h4><%= skill.title %></h4>
+							<div class="progress">
+								<div 
+									class="progress-bar progress-bar-striped bg-success" 
+									role="progressbar" 
+									aria-valuenow="<%= skill.percentage %>"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="width: <%= skill.percentage %>%"
+								></div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			</div>
+			<div class='col-md-8'>
+				<p>about me liuha lihwgido;a gli qisakh dliuwy about me liuha lihwgido;a gli qisakh dliuwy about me liuha lihwgido;a gli qisakh dliuwy about me liuha lihwgido;a gli qisakh dliuwy about me liuha li</p>
+				<p>
+					<button
+						class="btn btn-info"
+						type="button"
+						data-toggle="collapse"
+						data-target="#education"
+						aria-expanded="false"
+						aria-controler="education"
+					>
+						Education
+					</button>
+					<button
+						class="btn btn-info"
+						type="button"
+						data-toggle="collapse"
+						data-target="#workExperience"
+						aria-expanded="false"
+						aria-controler="workExperience"
+					>
+						Work Experience
+					</button>
+					<button
+						class="btn btn-info"
+						type="button"
+						data-toggle="collapse"
+						data-target="#academicProject"
+						aria-expanded="false"
+						aria-controler="academicProject"
+					>
+						Academic Project
+					</button>
+				</p>
 
+				<p>
+					<div class="collapse" id="workExperience">
+						<div class="card-block">
+							Job 1
+						</div>
+						<div class="card-block">
+							Job 2
+						</div>
+					</div>
 
-<div class="row">
-	<div class='col-md-4'>
-		<%= image_tag "profile.jpg", width: 250, height: 250, alt: "profile" %>
-	</div>
-	<div class='col-md-8'>
-		about me
+					<div class="collapse" id="education">
+						<div class="card-block">
+							School 1
+						</div>
+						<div class="card-block">
+							School 2
+						</div>
+					</div>
+					<div class="collapse" id="academicProject">
+						<div class="card-block">
+							Project 1
+						</div>
+						<div class="card-block">
+							Project 2
+						</div>
+						<div class="card-block">
+							Project 3
+						</div>
+						<div class="card-block">
+							Project 4
+						</div>
+					</div>
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
+
+
+

@@ -213,3 +213,46 @@ body {
 .tech_news > .card {
 	padding:30px;
 }
+.about-card {
+	color: black;
+	text-align: left;
+}
+.about-card .card {
+	padding:20px;
+}
+.about-picture {
+	display: block;
+	margin:auto;
+	border:1px solid grey;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid grey;
+    margin: 1em 0;
+    padding: 0; 
+}
+.about-card {
+	width: 80%;
+	margin: auto;
+}
+.about-card p {
+	margin-bottom: 20px;
+}
+.about-card a {
+	color: black;
+	text-decoration: underline;
+}
+.about-card iframe {
+	margin-left: 70px;
+}
+.about-card .card-block {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.skill {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
