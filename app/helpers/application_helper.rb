@@ -9,9 +9,9 @@ module ApplicationHelper
 		end
 	end
 
-	def session_source_helper
+	def session_source_helper style
 		if session[:source]
-			content_tag(:p, "Thanks for visiting from my #{session[:source]}")
+			content_tag(:div, "Thanks for visiting from my #{session[:source]}", class: style)
 		end
 	end
 	
