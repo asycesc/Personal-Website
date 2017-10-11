@@ -6,9 +6,10 @@
 			<div class='col-md-4'>
 				<%= image_tag "profile.jpg", width: 150, height: 150, alt: "profile", class:'about-picture' %>
 				<div class="skill-set">
+					<h5>Skill Sets of Daily Percentage</h5>
 					<% @skills.each do |skill| %>
 						<div class="skill">
-							<h4><%= skill.title %></h4>
+							<h6><%= skill.title %></h6>
 							<div class="progress">
 								<div 
 									class="progress-bar progress-bar-striped bg-success" 
