@@ -20,4 +20,10 @@ module BlogsHelper
 			CodeRay.scan(code, language).div
 		end
 	end
+
+	def blog_status_color blog
+		if blog.draft?
+			'color: red;'
+		end
+	end
 end
