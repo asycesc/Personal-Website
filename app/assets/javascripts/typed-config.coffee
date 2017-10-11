@@ -1,10 +1,11 @@
 document_ready = ->
 	Typed.new '.element',
 		strings: [
-			'Software development is the closest concept we have to magic.'
-			"It's my goal to ensure that anyone with a passion for coding can become a true programming artisan."
+			'Explore is not always easy.'
+			'A world of Code.'
+			'Hope you like this website.'
 		]
-		typeSpeed: 0
+		typeSpeed: 30
 	return
 
 
