@@ -7,7 +7,7 @@
 			<h1><%= @portfolio.title %> </h1>
 			<hr>
 			<h2><%= @portfolio.subtitle %> </h2>
-			<em><%= @portfolio.body %> </em>
+			<p><%= markdown @portfolio.body %> </p>
 			<hr>
 			<h3>Technology Stack</h3>
 			<% @portfolio.technologies.each do |tech| %>
